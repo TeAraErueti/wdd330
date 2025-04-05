@@ -1,0 +1,31 @@
+<!doctype html>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="scripts/test.js"></script>
+<script>
+
+  let calculator = {
+    sum() {
+      return this.a + this.b;
+    },
+  
+    mul() {
+      return this.a * this.b;
+    },
+
+    div() {
+      return this.a / this.b;
+    },
+
+    sub(){
+        return this.a - this.b;
+    },
+  
+    read() {
+      this.a = +prompt('a?', 0);
+      this.b = +prompt('b?', 0);
+    }
+  };
+
+</script>
+
+</html>

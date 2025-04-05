@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="timer.css">
+    
+</head>
+<body>
+
+    <h1 id="countdown"></h1>
+    <button id="startButton">Start</button>
+
+    <script>
+        const countdownDisplay = document.getElementById('countdown');
+        const startButton = document.getElementById('startButton');
+
+        let timeLeft = 10;
+        let countdownInterval;
+
+        startButton.addEventListener('click', () => {
+            clearInterval(countdownInterval); // Clear any existing interval
+            timeLeft = 10; // Reset the timer
+            countdownInterval = setInterval(() => {
+                if (timeLeft >= 0) {
+                    countdownDisplay.textContent = timeLeft;
+                    timeLeft-=1;
+                } else {
+                    clearInterval(countdownInterval); // Stop the countdown
+                    countdownDisplay.textContent = "Time's up!"; // Display a message
+                }
+            }, 1000); 
+        });
+    </script>
+</body>
+</html>
