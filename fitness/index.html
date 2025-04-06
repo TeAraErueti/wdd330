@@ -1,192 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fit For Life - Home Page</title>
-    <meta name="description" content="Fit For Life Home Page WDD330- Web Frontend Development ll Final Project">
-    <meta name="author" content="Te Ara Erueti">
+    <meta
+      name="description"
+      content="Fit For Life Home Page WDD330- Web Frontend Development ll Final Project"
+    />
+    <meta name="author" content="Te Ara Erueti" />
 
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/index-large.css">
-
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/index-large.css" />
 
     <script src="scripts/index.js" defer></script>
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/date.js" defer></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="icon" href="haw.ico">
+    <link rel="icon" href="haw.ico" />
 
-    <meta property="og:title" content="Fit For Life - Home Page">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tearaerueti.github.io/wdd330/Final-Project/index.html">
-    <meta property="og:image" content="https://tearaerueti.github.io/wdd330/Final-Project/images/meta.jpg">
-    <meta property="og:description" content="Home Page for the Fit For Life Website.">
-    <meta name="twitter:card" content="summary">
-</head>
+    <meta property="og:title" content="Fit For Life - Home Page" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://tearaerueti.github.io/wdd330/Final-Project/index.html"
+    />
+    <meta
+      property="og:image"
+      content="https://tearaerueti.github.io/wdd330/Final-Project/images/meta.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Home Page for the Fit For Life Website."
+    />
+    <meta name="twitter:card" content="summary" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <picture>
-            <source srcset="images/icon-large.webp" media="(min-width:38rem)">
-            <img src="images/icon.webp" alt="Fit For Life Directory Icon" width="40" height="40" loading="lazy">
-            <!--reminder to add icon image to attributions page = <a href="https://www.vecteezy.com/free-photos/dumbbell-icon">Dumbbell Icon Stock photos by Vecteezy</a>-->
-        </picture>
+      <picture>
+        <source srcset="images/icon-large.webp" media="(min-width:38rem)" />
+        <img
+          src="images/icon.webp"
+          alt="Fit For Life Directory Icon"
+          width="40"
+          height="40"
+          loading="lazy"
+        />
+        <!--reminder to add icon image to attributions page = <a href="https://www.vecteezy.com/free-photos/dumbbell-icon">Dumbbell Icon Stock photos by Vecteezy</a>-->
+      </picture>
 
-        <div>
-            <h2>Fit For Life</h2>
-        </div>
-        <button id="navButton" type="button" aria-label="Menu"></button>
+      <div>
+        <h2>Fit For Life</h2>
+      </div>
+      <button id="navButton" type="button" aria-label="Menu"></button>
     </header>
 
     <nav id="animation">
-        <ul class="menuLinks">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="plans.html">Fitness Plans</a></li>
-            <li><a href="demos.html">Fitness Demos</a></li>
-        </ul>
+      <ul class="menuLinks">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="plans.html">Fitness Plans</a></li>
+        <li><a href="demos.html">Fitness Demos</a></li>
+      </ul>
 
-        <a href ="join.html"><button id="signup-login">Sign Up / Login</button></a>
+      <a href="join.html"><button id="signup-login">Sign Up / Login</button></a>
     </nav>
-   
 
     <main>
-        <div id="homeGrid">
-            <div id="hero">
-                <picture>
-                    <source srcset="images/hero-large.jpg" media="(min-width:38rem)">
-                    <source srcset="images/hero-medium.jpg" media="(min-width:28rem)">
-                    <img src="images/hero.jpg" alt="two fit ladies doing lunges" loading="lazy" width="640" height="427">
-                </picture>
-                <h1>COME JOIN US AT FIT FOR LIFE...</h1>
-            </div>
-
-            <div id="basic">
-                <h2>Health & Wellbeing</h2>
-                <p id="message"></p>
-            </div>
-
-            <div id="media">
-                <a href="https://www.facebook.com">
-                <img src="images/media.jpg" alt="social media" loading="lazy" width="340" height="226">
-
-                <h3>Social Media</h3>
-                <!--Photo by <a href="https://unsplash.com/@nate_dumlao?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nathan Dumlao</a> on <a href="https://unsplash.com/photos/white-samsung-android-smartphone-on-brown-wooden-table-kLmt1mpGJVg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                -->
-                </a>
-            </div>
-
-            <div id="tracker">
-                <a href="tracker.html">
-                <img src="images/tracker-small.jpg" alt="progress tracker" loading="lazy" width="340" height="226">
-                <h3>Progress Tracker</h3>
-                <!--Photo by <a href="https://unsplash.com/@jacobbentzinger?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jacob Bentzinger</a> on <a href="https://unsplash.com/photos/woman-in-pink-bikini-top-MThIIpW8rpU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                -->                
-            </a>
-            </div>
-
-            <div id="reminders">
-                <a href="reminders.html">
-                <img src="images/reminder.jpg" alt="workout reminders" loading="lazy" width="340" height="226">
-                <h3>Workout Reminders</h3>
-                <!--Photo by <a href="https://unsplash.com/@lgnwvr?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">LOGAN WEAVER | @LGNWVR</a> on <a href="https://unsplash.com/photos/woman-in-pink-long-sleeve-shirt-and-black-pants-holding-black-kettle-bell-9D_rUDe7xvA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                -->
-                </a>
-            </div>
+      <div id="homeGrid">
+        <div id="hero">
+          <picture>
+            <source srcset="images/hero-large.jpg" media="(min-width:38rem)" />
+            <source srcset="images/hero-medium.jpg" media="(min-width:28rem)" />
+            <img
+              src="images/hero.jpg"
+              alt="two fit ladies doing lunges"
+              loading="lazy"
+              width="640"
+              height="427"
+            />
+          </picture>
+          <h1>COME JOIN US AT FIT FOR LIFE...</h1>
         </div>
 
-        <div id="cards">
-            <div id="purpose">
-                <img src="images/purpose-small.jpg" alt="team of fit healthy people at gym" loading="lazy" width="640"
-                    height="427">
-                <h2>Purpose</h2>
-                <p>We started planning back in 2023 when members of our team were collaborating with fitness professionals
-                    and experts in the field to bring forth "Fit For Life". Our platform launched late 2024 in hopes of 
-                    assisting people in the challenges of modernised fitness planning.
-                    We are continually researching and adapting our site to our clients needs.
-                    As a group of fitness professionals, we have come together to share our knowledge and
-                    passion of fitness online to help you and many others. Our chosen platform of online services has 
-                    allowed us to reach a broader audience and help more people than we could have ever imagined. 
-                    We are here to help you with your fitness journey, whether you are a beginner or an expert.
-                    We look forward to working with you in your fitness planning and goals at Fit For Life.</p>
-            </div>
-
-            <div id="team">
-                <img src="images/team-small.jpg" alt="group of fit ladies" loading="lazy" width="640" height="427">
-                <h2>Meet the Team</h2>
-                <p>Meet Amy, Laurell, Jessie and Denise! So who are we? We are the team behind Fit For Life.
-                    We are a group of fitness professionals, mothers, and friends with varying backgrounds and experience in fitness.
-                    Amy is a qualified personal trainer and has been working in the fitness industry for over 10 years.
-                    Laurell is a national and international fitness competitor in body building, IFBB Pro physique, and bikini with over 7 years experience.
-                    Jessie is our marathon runner and HIIT trainer who loves to help people of all ages with their cardio, high intensity and strength workouts.
-                    Denise is a qualified yoga and pilates instructor and has been teaching for over 5 years. 
-                    Together we have come up with the dream team, along with our connecting partners in the industry to deliver effective fitness plans for you. 
-                    We look forward to working with you in helping you achieve your fitness goals here at Fit For Life.</p>        
-            </div>
-
-            <div id="subscribe">
-                <h2> Subscribe to our Newsletter </h2>
-                <form method="GET" action="thankyou.html" class="form">
-                    <label>First Name: <input type="text" name="firstName" required autocomplete="given-name"
-                            title="Your First Name"></label>
-                    <label>Last Name: <input type="text" name="lastName" required autocomplete="family-name"
-                            title="Your Last Name"></label>
-                    <label>E-mail: <input type="email" name="email" required placeholder="username@gmail.com"
-                            autocomplete="email"></label>
-
-                    <input type="hidden" name="timestamp" id="timestamp">
-
-                    <input type="submit" value="Subscribe Today">
-                </form>
-            </div>
-
+        <div id="basic">
+          <h2>Health & Wellbeing</h2>
+          <p id="message"></p>
         </div>
+
+        <div id="media">
+          <a href="https://www.facebook.com">
+            <img
+              src="images/media.jpg"
+              alt="social media"
+              loading="lazy"
+              width="340"
+              height="226"
+            />
+
+            <h3>Social Media</h3>
+            <!--Photo by <a href="https://unsplash.com/@nate_dumlao?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nathan Dumlao</a> on <a href="https://unsplash.com/photos/white-samsung-android-smartphone-on-brown-wooden-table-kLmt1mpGJVg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                -->
+          </a>
+        </div>
+
+        <div id="tracker">
+          <a href="tracker.html">
+            <img
+              src="images/tracker-small.jpg"
+              alt="progress tracker"
+              loading="lazy"
+              width="340"
+              height="226"
+            />
+            <h3>Progress Tracker</h3>
+            <!--Photo by <a href="https://unsplash.com/@jacobbentzinger?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jacob Bentzinger</a> on <a href="https://unsplash.com/photos/woman-in-pink-bikini-top-MThIIpW8rpU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                -->
+          </a>
+        </div>
+
+        <div id="reminders">
+          <a href="reminders.html">
+            <img
+              src="images/reminder.jpg"
+              alt="workout reminders"
+              loading="lazy"
+              width="340"
+              height="226"
+            />
+            <h3>Workout Reminders</h3>
+            <!--Photo by <a href="https://unsplash.com/@lgnwvr?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">LOGAN WEAVER | @LGNWVR</a> on <a href="https://unsplash.com/photos/woman-in-pink-long-sleeve-shirt-and-black-pants-holding-black-kettle-bell-9D_rUDe7xvA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                -->
+          </a>
+        </div>
+      </div>
+
+      <div id="cards">
+        <div id="purpose">
+          <img
+            src="images/purpose-small.jpg"
+            alt="team of fit healthy people at gym"
+            loading="lazy"
+            width="640"
+            height="427"
+          />
+          <h2>Purpose</h2>
+          <p>
+            We started planning back in 2023 when members of our team were
+            collaborating with fitness professionals and experts in the field to
+            bring forth "Fit For Life". Our platform launched late 2024 in hopes
+            of assisting people in the challenges of modernised fitness
+            planning. We are continually researching and adapting our site to
+            our clients needs. As a group of fitness professionals, we have come
+            together to share our knowledge and passion of fitness online to
+            help you and many others. Our chosen platform of online services has
+            allowed us to reach a broader audience and help more people than we
+            could have ever imagined. We are here to help you with your fitness
+            journey, whether you are a beginner or an expert. We look forward to
+            working with you in your fitness planning and goals at Fit For Life.
+          </p>
+        </div>
+
+        <div id="team">
+          <img
+            src="images/team-small.jpg"
+            alt="group of fit ladies"
+            loading="lazy"
+            width="640"
+            height="427"
+          />
+          <h2>Meet the Team</h2>
+          <p>
+            Meet Amy, Laurell, Jessie and Denise! So who are we? We are the team
+            behind Fit For Life. We are a group of fitness professionals,
+            mothers, and friends with varying backgrounds and experience in
+            fitness. Amy is a qualified personal trainer and has been working in
+            the fitness industry for over 10 years. Laurell is a national and
+            international fitness competitor in body building, IFBB Pro
+            physique, and bikini with over 7 years experience. Jessie is our
+            marathon runner and HIIT trainer who loves to help people of all
+            ages with their cardio, high intensity and strength workouts. Denise
+            is a qualified yoga and pilates instructor and has been teaching for
+            over 5 years. Together we have come up with the dream team, along
+            with our connecting partners in the industry to deliver effective
+            fitness plans for you. We look forward to working with you in
+            helping you achieve your fitness goals here at Fit For Life.
+          </p>
+        </div>
+
+        <div id="subscribe">
+          <h2>Subscribe to our Newsletter</h2>
+          <form method="GET" action="thankyou.html" class="form">
+            <label
+              >First Name:
+              <input
+                type="text"
+                name="firstName"
+                required
+                autocomplete="given-name"
+                title="Your First Name"
+            /></label>
+            <label
+              >Last Name:
+              <input
+                type="text"
+                name="lastName"
+                required
+                autocomplete="family-name"
+                title="Your Last Name"
+            /></label>
+            <label
+              >E-mail:
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="username@gmail.com"
+                autocomplete="email"
+            /></label>
+
+            <input type="hidden" name="timestamp" id="timestamp" />
+
+            <input type="submit" value="Subscribe Today" />
+          </form>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <div>
-            <p><strong>Fit For Life</strong></p>
-            <p>170 Fast Lane</p>
-            <p>Hamilton 3290</p>
-            <p>admin@fitforlife.co.nz</p>
-            <p>0800 369 485</p>
-        </div>
+      <div>
+        <p><strong>Fit For Life</strong></p>
+        <p>170 Fast Lane</p>
+        <p>Hamilton 3290</p>
+        <p>admin@fitforlife.co.nz</p>
+        <p>0800 369 485</p>
+      </div>
 
-        <div id="attributions">
-            <a href="attributions.html">
-                <img src="images/attributions.png" alt="icon link to attributions page">
-            </a>
-        </div>
+      <div id="attributions">
+        <a href="attributions.html">
+          <img
+            src="images/attributions.png"
+            alt="icon link to attributions page"
+          />
+        </a>
+      </div>
 
-        <div>
-            
-            <p>&copy; <span id="currentyear"></span> &clubs; Fit For Life &clubs; New Zealand</p>
-            <p>All rights reserved</p>
-            <nav class="sociallinks">  
-                <!--<a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Freepik - Flaticon</a>  
+      <div>
+        <p>
+          &copy; <span id="currentyear"></span> &clubs; Fit For Life &clubs; New
+          Zealand
+        </p>
+        <p>All rights reserved</p>
+        <nav class="sociallinks">
+          <!--<a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Freepik - Flaticon</a>  
                 <a href="https://www.flaticon.com/free-icons/popular" title="popular icons">Popular icons created by Indygo - Flaticon</a>-->
-            
-                <a href="https://www.facebook.com">
-                    <img src="images/facebook.png" alt="Facebook">
-                </a>
-                
-                <a href="https://www.instagram.com">
-                    <img src="images/instagram.png" alt="Instagram">
-                </a>
-        
-            </nav> 
 
-        </div>
+          <a href="https://www.facebook.com">
+            <img src="images/facebook.png" alt="Facebook" />
+          </a>
+
+          <a href="https://www.instagram.com">
+            <img src="images/instagram.png" alt="Instagram" />
+          </a>
+        </nav>
+      </div>
     </footer>
-
-</body>
-
-</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  </body>
+</html>
