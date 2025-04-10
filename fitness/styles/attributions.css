@@ -106,8 +106,10 @@ footer {
     padding: 1rem;
     margin: auto;
     margin-top: 90px;
-}
-
+    display: flex;
+    justify-content: space-between;
+  }
+  
 footer div {
     margin-left: 2rem;
 }
@@ -164,14 +166,14 @@ footer div {
 
     #attributions {
         margin-top: 50px;
-      }
+    }
     
-      .sociallinks {
+    .sociallinks {
         display: flex;
         justify-content: space-around;
         align-items: center;
         margin: 40px auto;
         padding: 0 40px;
-      }
+    }
 
 }
