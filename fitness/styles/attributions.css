@@ -162,4 +162,16 @@ footer div {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    #attributions {
+        margin-top: 50px;
+      }
+    
+      .sociallinks {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 40px auto;
+        padding: 0 40px;
+      }
+
 }
