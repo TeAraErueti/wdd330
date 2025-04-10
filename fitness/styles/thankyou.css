@@ -146,9 +146,9 @@ footer div {
     #showData {
         grid-template-columns: repeat(2, 1fr);
     }
+}
 
-
-
+@media (min-width: 38rem){
     footer {
         display: grid;
         align-content: center;
