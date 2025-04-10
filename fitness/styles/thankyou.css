@@ -147,6 +147,8 @@ footer div {
         grid-template-columns: repeat(2, 1fr);
     }
 
+
+
     footer {
         display: grid;
         align-content: center;
