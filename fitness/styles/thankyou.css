@@ -134,8 +134,10 @@ footer {
     padding: 1rem;
     margin: auto;
     margin-top: 90px;
-}
-
+    display: flex;
+    justify-content: space-between;
+  }
+  
 footer div {
     margin-left: 2rem;
 }
@@ -144,6 +146,25 @@ footer div {
     #showData {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    footer {
+        display: grid;
+        align-content: center;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #attributions {
+        margin-top: 50px;
+    }
+    
+    .sociallinks {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 40px auto;
+        padding: 0 40px;
+    }
+
 }
 
 @media (max-width: 30rem) {
