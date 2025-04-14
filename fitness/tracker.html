@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fit For Life - Fitness Planner Page</title>
+    <title>Fit For Life - Fitness Progress Tracker</title>
     <meta name="description"
-        content="Fit For Life Fitness Planner Page WDD330- Web Frontend Development ll Final Project">
+        content="Fit For Life Fitness Progress Tracker Page WDD330- Web Frontend Development ll Final Project">
     <meta name="author" content="Te Ara Erueti">
 
-    <link rel="stylesheet" href="styles/normalize.css">s
-    <link rel="stylesheet" href="styles/plans.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/tracker.css">
+    <!--link rel="stylesheet" href="styles/tracker-large.css"-->
 
-    <script src="scripts/plans.js" defer></script>
+
+    <script src="scripts/tracker.js" defer></script>
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/date.js" defer></script>
 
@@ -24,11 +26,11 @@
 
     <link rel="icon" href="haw.ico">
 
-    <meta property="og:title" content="Fit For Life - Fitness Planner Page" />
+    <meta property="og:title" content="Fit For Life - Fitness Progress Tracker Page" />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://tearaerueti.github.io/wdd330/fitness/plans.html"
+      content="https://tearaerueti.github.io/wdd330/fitness/tracker.html"
     />
     <meta
       property="og:image"
@@ -37,57 +39,67 @@
     />
     <meta
       property="og:description"
-      content="Fitness Planner Page for the Fit For Life Website."
+      content="Fitness Tracker Page for the Fit For Life Website."
     />
     <meta name="twitter:card" content="summary" />
 </head>
 
 <body>
+
     <header>
-        <picture>
+        <div class="left">
+          <picture>
             <source srcset="images/icon-large.webp" media="(min-width:38rem)">
             <img src="images/icon.webp" alt="Fit For Life Icon" width="40" height="40" loading="lazy">
-        </picture>
-
-        <div>
-            <h2>Fit For Life</h2>
+          </picture>
         </div>
-        <button id="navButton" type="button" aria-label="Menu"></button>
-    </header>
-
+      
+        <div class="center">
+          <h2>Fit For Life</h2>
+        </div>
+      
+        <div class="right">
+          <button id="navButton" type="button" aria-label="Menu">&#9776;</button>
+        </div>
+      </header>
+      
+      
     <nav id="animation">
         <ul class="menuLinks">
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="plans.html">Fitness Plans</a></li>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="plans.html">Fitness Plans</a></li>
             <li><a href="demos.html">Fitness Demos</a></li>
           </ul>
-    </nav>
+    </nav> 
 
   <main>
-    <section id="weather-workout">
-      <h2>Suggest Workout Based on Weather</h2>
-      <input type="text" id="weather-condition" placeholder="Enter weather condition (e.g. sunny, hot, rainy, wet, cold, cloudy)">
-      <button onclick="suggestWorkoutBasedOnWeather()">Suggest Workout</button>
-      <p id="weather-workout-suggestion"></p>
-    </section>
 
-    <section id="youtube-search">
-      <h2>Search YouTube Workouts</h2>
-      <input type="text" id="youtube-query" placeholder="Enter workout type (e.g., yoga, cardio)">
-      <button onclick="searchYouTubeWorkouts()">Search</button>
-      <div id="youtube-results"></div>
-    </section>
+    <h1>🏋️ Fitness Progress Tracker</h1>
 
-    <section id="planner">
-      <h2>Workout Planner</h2>
-      <form id="planner-form">
-        <input type="text" id="workout-type" placeholder="Workout Type" required>
-        <input type="text" id="workout-duration" placeholder="Duration (min)" required>
-        <input type="url" id="workout-link" placeholder="YouTube Video Link" required>
-        <input type="date" id="workout-date" required>
-        <button type="submit">Add to Planner</button>
-      </form>
-      <ul id="planner-list"></ul>
+    <form id="trackerForm">
+      <input type="date" id="date" required />
+      <input type="text" id="exercise" placeholder="Exercise (e.g., Squats)" required />
+      <input type="number" id="sets" placeholder="Sets" min="1" required />
+      <input type="number" id="reps" placeholder="Reps" min="1" required />
+      <input type="text" id="notes" placeholder="Notes (optional)" />
+      <button type="submit">Add Entry</button>
+    </form>
+
+    <section>
+      <h2>Your Progress</h2>
+      <table id="progressTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Exercise</th>
+            <th>Sets</th>
+            <th>Reps</th>
+            <th>Notes</th>
+            <th>❌</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </section>
   </main>
 

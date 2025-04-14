@@ -142,6 +142,12 @@ footer div {
     margin-left: 2rem;
 }
 
+@media (max-width: 30rem) {
+    #showData {
+        flex-direction: column;
+    }
+}
+
 @media (min-width: 40rem) {
     #showData {
         grid-template-columns: repeat(2, 1fr);
@@ -169,8 +175,3 @@ footer div {
 
 }
 
-@media (max-width: 30rem) {
-    #showData {
-        flex-direction: column;
-    }
-}

@@ -1,0 +1,235 @@
+:root {
+    --primary: #28b686f3;
+    --dark: #41573f;
+    --light: #f9f9f9;
+    --p-color: #41573f;
+    --s-color: #28b686f3;
+    --t-color: rgba(255, 255, 255, 0.932);
+  }
+  
+  body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 20px;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  main h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }  
+  
+  
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  input, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  #reminderList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #reminderList li {
+    background: #e9f7ef;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #28a745;
+  }
+
+  #inPageNotification {
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  header {
+    display: flex;
+    align-items: center;        
+    justify-content: center;
+    justify-content: space-between;
+    background-color: var(--s-color);
+    padding: 10px 20px;
+    position:relative;
+  }
+  
+  header picture img {
+    height: 40px;
+    width: 40px;
+  }
+  
+header .left,
+header .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+header .center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none; /* So button clicks still work */
+}
+
+header .center h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+
+nav {
+    background-color: var(--p-color);
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+#navButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--p-color);
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 1rem;
+  }
+  
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+ul.menuLinks {
+    display: flex;
+    list-style-type:none;
+    justify-content:space-around;
+    justify-items:auto;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+ul.menuLinks li a {
+    display: block;
+    padding: .75rem 2vw;
+    color: var(--t-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+ul.menuLinks a:hover {
+    background-color: rgba(2, 2, 2, 0.849);
+}
+
+li.active a::before {
+    content: "📍";
+}
+
+#navButton.open::before {
+    content: "X";
+}
+
+footer {
+    background-color: var(--p-color);
+    color: var(--t-color);
+    padding: 2rem 1rem;
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  footer div {
+    flex: 1 1 200px;
+    margin: 0;
+  }
+  
+  footer img {
+    max-width: 100%;
+    height: auto;
+  }
+  .sociallinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px auto;
+}
+
+@media (max-width: 600px) {
+    form {
+      grid-template-columns: 1fr;
+    }
+  
+    .sociallinks {
+      flex-direction: column;
+    }
+  
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul.menuLinks li a {
+      text-align: center;
+    }
+  }
+  

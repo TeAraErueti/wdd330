@@ -1,0 +1,314 @@
+:root {
+    --p-color: #41573f;
+    --s-color: #28b686f3;
+    --t-color: rgba(255, 255, 255, 0.932);
+}
+
+body,
+p,
+a,
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Inter", "Open Sans", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    display: block;
+}
+
+#hero img {
+    width: 100%;
+    height: 100%;
+}
+
+#toggleView {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#gridView,
+#listView {
+    margin: 0 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+#gridView:hover,
+#listView:hover {
+    background-color: #f0f0f0e8;
+    
+}
+
+#cardscontainer {
+    margin: 21px auto;
+}
+
+#cardscontainer.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+#cardscontainer.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card,
+.grid section,
+.list section {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--s-color);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid section img,
+.card img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--p-color);
+    box-shadow: 0 0 10px #5c5a5a;
+    border-radius: 8px;
+    margin: 10px 0 1rem;
+}
+
+.list section img {
+    display: none;
+}
+
+.list section:nth-child(even) {
+    background-color: rgba(237, 245, 245, 0.849);
+}
+
+.list section h2 {
+    font-size: 1rem;
+}
+
+.exerciseButton,
+#cards button,
+#navButton {
+    font-family: "Inter", "Open Sans", sans-serif;
+    cursor: pointer;
+}
+
+#cards button {
+    padding: .3rem;
+    border-radius: .5rem;
+    background-color: rgb(13, 14, 13);
+    color: white;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+#cards button:hover {
+    background-color: rgb(224, 238, 26);
+    color: black;
+    transform: scale(1.1);
+}
+
+#exerciseModal {
+    width: 90%;
+    max-width: 600px;
+    padding: 2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 10;
+}
+
+#exerciseModal::backdrop,
+::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#exerciseModal h2,
+#exerciseModal h3,
+#exerciseModal h4,
+#exerciseModal ul {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+#exerciseModal ul {
+    padding-left: 20px;
+}
+
+#exerciseModal a {
+    color: var(--p-color);
+    text-decoration: underline;
+}
+
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: transparent;
+    border: none;
+    padding: .5rem 1rem;
+}
+
+#closeModal:hover {
+    color: rgb(14, 13, 13);
+    background-color: #f7e014;
+}
+
+#events,
+#currentWeather,
+#forecast {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: var(--p-color);
+    color: var(--t-color);
+    margin: 10px;
+}
+
+#events h3,
+#currentWeather h3,
+#forecast h3 {
+    background-color: var(--t-color);
+    color: var(--p-color);
+    font-weight: 900;
+    margin: auto;
+    padding: 1rem;
+}
+
+#events ul {
+    font-weight: 500;
+    margin-right: 40px;
+}
+
+#currentWeather p {
+    font-weight: bold;
+}
+
+#forecast p {
+    margin: 0 50px;
+}
+
+#weatherdiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#iconDiv {
+    grid-column: 1;
+}
+
+#textDiv {
+    grid-column: 2;
+    margin-left: 10px;
+}
+
+#workouts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+#workouts img {
+    max-width: 85%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#workouts p,
+#weights p,
+#yoga p,
+#boxing p {
+    font-weight: 550;
+    color: black;
+    padding: 10px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    background-color: var(--s-color);
+}
+
+header img,
+header div {
+    margin-left: 10px;
+}
+
+header div p,
+header div h2 {
+    margin: 10px;
+}
+
+nav {
+    background-color: var(--p-color);
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+ul.menuLinks {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+ul.menuLinks li a {
+    display: block;
+    padding: .75rem 2vw;
+    color: var(--t-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+ul.menuLinks a:hover {
+    background-color: rgba(2, 2, 2, 0.849);
+}
+
+li.active a::before {
+    content: "📍";
+}
+
+#navButton.open::before {
+    content: "X";
+}
+
+footer {
+    background-color: var(--p-color);
+    color: var(--t-color);
+    padding: 1rem;
+    margin: 90px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div {
+    margin-left: 2rem;
+}

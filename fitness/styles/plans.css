@@ -1,0 +1,140 @@
+:root {
+    --p-color: #41573f;
+    --s-color: #28b686f3;
+    --t-color: rgba(255, 255, 255, 0.932);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+ 
+header {
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    background-color: var(--s-color);
+}
+
+header img,
+header div {
+    margin-left: 10px;
+}
+
+header div p,
+header div h2 {
+    margin: 10px;
+}
+
+nav {
+    background-color: var(--p-color);
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+ul.menuLinks {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+ul.menuLinks li a {
+    display: block;
+    padding: .75rem 2vw;
+    color: var(--t-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+ul.menuLinks a:hover {
+    background-color: rgba(2, 2, 2, 0.849);
+}
+
+li.active a::before {
+    content: "📍";
+}
+
+#navButton.open::before {
+    content: "X";
+}
+
+footer {
+    background-color: var(--p-color);
+    color: var(--t-color);
+    padding: 1rem;
+    margin: 90px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div {
+    margin-left: 2rem;
+}
+
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  input, button {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  #youtube-query, #weather-condition{
+    width: 460px; /* Or any width you like */
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  #query, #weatherCondition{
+    display:block;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #333;
+    color: white;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  #youtube-results {
+    margin-top: 10px;
+  }
+  
+  #planner-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #planner-list li {
+    background-color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
