@@ -59,7 +59,7 @@ function suggestWorkoutBasedOnWeather() {
       return;
     }
   
-    const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+    const apiKey = 'AIzaSyACHyfhqVRPWSlY2hPTzjSH6Pmamb1zewQ'; 
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(query)} workout&maxResults=5&videoEmbeddable=true&key=${apiKey}`;
   
     fetch(url)
