@@ -10,80 +10,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
   }
-  
- 
-header {
-    display: grid;
-    grid-template-columns: 44px auto 44px;
-    align-items: end;
-    background-color: var(--s-color);
-}
 
-header img,
-header div {
-    margin-left: 10px;
-}
-
-header div p,
-header div h2 {
-    margin: 10px;
-}
-
-nav {
-    background-color: var(--p-color);
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.5s ease-out;
-}
-
-nav.open {
-    grid-template-rows: 1fr;
-}
-
-nav ul {
-    overflow: hidden;
-}
-
-ul.menuLinks {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
-}
-
-ul.menuLinks li a {
-    display: block;
-    padding: .75rem 2vw;
-    color: var(--t-color);
-    text-decoration: none;
-    font-size: 1.3rem;
-}
-
-ul.menuLinks a:hover {
-    background-color: rgba(2, 2, 2, 0.849);
-}
-
-li.active a::before {
-    content: "📍";
-}
-
-#navButton.open::before {
-    content: "X";
-}
-
-footer {
-    background-color: var(--p-color);
-    color: var(--t-color);
-    padding: 1rem;
-    margin: 90px auto 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-footer div {
-    margin-left: 2rem;
-}
-
-  
   main {
     padding: 20px;
   }
@@ -97,25 +24,40 @@ footer div {
     margin: 5px;
   }
 
-  #youtube-query, #weather-condition{
-    width: 460px; /* Or any width you like */
+  /* === Base Responsive Styles === */
+input[type="text"],
+input[type="url"],
+input[type="date"],
+button {
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 1rem;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+  #youtube-query, #weather-condition, #planner-form{
+    
     padding: 8px;
     font-size: 16px;
   }
 
-  #query, #weatherCondition{
-    display:block;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
   button {
     background-color: #333;
     color: white;
     border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
   }
   
   button:hover {
@@ -137,4 +79,143 @@ footer div {
     padding: 10px;
     border: 1px solid #ddd;
   }
+
+  header {
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    background-color: var(--s-color);
+  }
+  
+  header div p,
+  header div h2 {
+    margin: 10px;
+  }
+  
+  header img,
+  header div {
+    margin-left: 10px;
+  }
+  
+  nav {
+    background-color: var(--p-color);
+  }
+  
+  #navButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--p-color);
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 0.25rem 2vw;
+  }
+  
+  #navButton::before {
+    content: "\2630";
+  }
+  
+  ul.menuLinks li a {
+    display: block;
+    padding: 0.75rem 2vw;
+    color: var(--t-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+  
+  ul.menuLinks a:hover {
+    background-color: rgba(2, 2, 2, 0.849);
+  }
+  
+  li.active a::before {
+    content: "📍";
+  }
+  
+  ul.menuLinks {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  #navButton.open::before {
+    content: "X";
+  }
+  
+  nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+  }
+  
+  nav ul {
+    overflow: hidden;
+  }
+  
+  nav.open {
+    grid-template-rows: 1fr;
+  }
+  
+  footer {
+    background-color: var(--p-color);
+    color: var(--t-color);
+    padding: 1rem;
+    margin: auto;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer div {
+    margin-left: 2rem;
+  }
+
+  footer p{
+    text-align:center;
+  }
+
+  /* === Responsive Layout === */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  header {
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 10px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer div {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .video h3 {
+    font-size: 1rem;
+  }
+
+  .video p {
+    font-size: 0.9rem;
+  }
+
+  nav ul.menuLinks li a {
+    font-size: 1rem;
+  }
+}
+  
+ 
   

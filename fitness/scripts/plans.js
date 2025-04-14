@@ -1,9 +1,8 @@
 // Function to suggest a workout based on weather condition
 // Suggest workout based on weather
 function getWeather(city) {
-  //const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY'; // Replace with your API key
-  const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-37.78&lon=175.25&units=metric&appid=2d13c0f2c18977e869ef1026588e58cb';
-  const url3d = 'https://api.openweathermap.org/data/2.5/forecast?lat=-37.78&lon=175.25&units=metric&appid=2d13c0f2c18977e869ef1026588e58cb';
+  const apiKey='2d13c0f2c18977e869ef1026588e58cb'; 
+  const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=-37.78&lon=175.25&units=metric&appid=2d13c0f2c18977e869ef1026588e58cb';
   
   fetch(url)
     .then(response => response.json())
@@ -30,11 +29,14 @@ function suggestWorkoutBasedOnWeather() {
       case 'hot':
         suggestion = '☀️ It looks hot outside! Should we try for a swim or an indoor workout?';
         break;
-      case 'rainy', 'wet', 'storm':
+      case 'rainy':
+      case 'wet':
+      case 'storm':
         suggestion = '🌧️ How about indoor workout today?...We could try a yoga, pilates or even a strength based training workout!';
-        break;
-      case 'cold', 'snow':
-        suggestion = '❄️ Perfect time for a HIIT or strength based workout indoors. Lets get those muscles fired up warm!';
+        break;        
+      case 'cold':
+      case 'snow':
+        suggestion = '❄️ Perfect time for a HIIT or strength based workout indoors. Let’s get those muscles fired up warm!';
         break;
       case 'cloudy':
         suggestion = '☁️ A good day for a brisk walk or a light jog. We can always opt for an indoor cardio or strength based workout if the weather looks uncertain.';
@@ -57,22 +59,24 @@ function suggestWorkoutBasedOnWeather() {
       return;
     }
   
-    const apiKey = 'YOUR_YOUTUBE_API_KEY'; // <-- Replace with your API key!
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(query)} workout&maxResults=5&key=${apiKey}`;
+    const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(query)} workout&maxResults=5&videoEmbeddable=true&key=${apiKey}`;
   
     fetch(url)
       .then(response => response.json())
       .then(data => {
         if (data.items && data.items.length > 0) {
           data.items.forEach(item => {
-            const videoElement = document.createElement('div');
-            videoElement.classList.add('video');
-            videoElement.innerHTML = `
-              <h3>${item.snippet.title}</h3>
-              <p>${item.snippet.description}</p>
-              <a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank">Watch Video</a>
-            `;
-            resultsContainer.appendChild(videoElement);
+            if (item.id && item.id.videoId) {
+              const videoElement = document.createElement('div');
+              videoElement.classList.add('video');
+              videoElement.innerHTML = `
+                <h3>${item.snippet.title}</h3>
+                <p>${item.snippet.description}</p>
+                <a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank">Watch Video</a>
+              `;
+              resultsContainer.appendChild(videoElement);
+            }
           });
         } else {
           resultsContainer.textContent = 'No videos found.';
@@ -80,9 +84,9 @@ function suggestWorkoutBasedOnWeather() {
       })
       .catch(error => {
         resultsContainer.textContent = '⚠️ Error fetching videos.';
-        console.error(error);
+        console.error('YouTube API error:', error);
       });
-  }
+  }  
   
   // Add workout to planner
   function addWorkoutToPlanner(event) {
