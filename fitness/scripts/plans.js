@@ -117,8 +117,8 @@ function suggestWorkoutBasedOnWeather() {
   // Mock workout plan data
   function getUserWorkoutPlan() {
     return [
-      { type: 'Running', duration: 30, date: '2025-04-14', link: 'https://www.youtube.com/watch?v=example1' },
-      { type: 'Yoga', duration: 45, date: '2025-04-15', link: 'https://www.youtube.com/watch?v=example2' }
+      { type: 'Running Example Entry', duration: 30, date: '2025-04-14', link: 'https://www.youtube.com/watch?v=example1' },
+      { type: 'Yoga Example Entry', duration: 45, date: '2025-04-15', link: 'https://www.youtube.com/watch?v=example2' }
     ];
   }
   
