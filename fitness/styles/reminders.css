@@ -224,12 +224,31 @@ footer {
     }
   
     header {
-      flex-direction: column;
-      text-align: center;
+      grid-template-columns: 1fr 2fr 1fr;
+      padding: 10px;
     }
   
     nav ul.menuLinks li a {
       text-align: center;
+      font-size: 1rem;
     }
-  }
+
+    body {
+      font-size: 15px;
+    }
+    
+    footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   
+    footer div {
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+
+  }
+
+
+    

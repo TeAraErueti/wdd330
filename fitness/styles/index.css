@@ -32,6 +32,7 @@ body {
 #message {
   font-weight: 600;
   font-size: larger;
+  padding:20px;
 }
 
 #basic {
@@ -260,3 +261,30 @@ footer {
 footer div {
   margin-left: 2rem;
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  header {
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer div {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  nav ul.menuLinks li a {
+    font-size: 1rem;
+  }
+}
+  

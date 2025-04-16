@@ -9,13 +9,14 @@ h2,
 h3 {
     font-family: "Inter", "Open-Sans";
     text-align: center;
+    padding: 1rem;
 }
 
 h1 {
     display: block;
     background-color: #498357;
     color: rgb(240, 237, 237);
-    margin: 3% auto;
+    
 }
 
 p,
@@ -154,24 +155,40 @@ footer div {
     }
 }
 
-@media (min-width: 38rem){
-    footer {
-        display: grid;
-        align-content: center;
-        grid-template-columns: repeat(3, 1fr);
-    }
+@media (max-width: 600px){
 
-    #attributions {
-        margin-top: 50px;
-    }
+     body {
+        font-size: 15px;
+      }
+
+      #showData{
+        padding:0px;
+        justify-content:center;
+        align-items:center;
+      }
     
-    .sociallinks {
-        display: flex;
-        justify-content: space-around;
+      header {
+        grid-template-columns: 1fr 2fr 1fr;
+        padding: 10px;
+        align-items:center;        
+      }
+    
+      footer {
+        flex-direction: column;
         align-items: center;
-        margin: 40px auto;
-        padding: 0 40px;
+        text-align: center;
+      }
+    
+      footer div {
+        margin-left: 0;
+        margin-bottom: 1rem;
+      }
+    
+      nav ul.menuLinks li a {
+        font-size: 1rem;
+      }
+
     }
 
-}
-
+        
+     

@@ -211,12 +211,56 @@ footer {
     }
   
     header {
-      flex-direction: column;
-      text-align: center;
+      grid-template-columns: 1fr 2fr 1fr;
+      padding: 10px;
     }
   
     nav ul.menuLinks li a {
       text-align: center;
+      font-size: 1rem;
+    }
+
+    body {
+      font-size: 15px;
+    }
+    
+    footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    footer div {
+      margin-left: 0;
+      margin-bottom: 1rem;
     }
   }
-  
+
+  /* Mobile-friendly table container */
+section {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Make the table fill the container but not overflow */
+#progressTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+/* Optional: Make table headers and cells more compact for small screens */
+#progressTable th,
+#progressTable td {
+  padding: 0.5rem;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* Optional: Adjust column width or hide notes on small screens */
+@media (max-width: 480px) {
+  #progressTable th:nth-child(5),
+  #progressTable td:nth-child(5) {
+    display: none; /* Hide "Notes" column */
+  }
+}
